@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlesXamarinForms.ControlesComandos">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="15">
+            <Button Text="Mostrar el Valor de PI" 
+                    BackgroundColor="DarkGreen" 
+                    TextColor="White" 
+                    Clicked="obtenerValorPI" IsVisible="False"/>
+            <StackLayout Orientation="Horizontal"  IsVisible="False">
+                <Label Text="El valor de PI es: " 
+                       FontAttributes="Bold"></Label>
+                <Label x:Name="lblPI" 
+                       Text=""></Label>
+            </StackLayout>
+            <ImageButton Source="calculadora.png"
+                         HeightRequest="50"
+                         Padding="10"
+                         HorizontalOptions="Center"
+                         CornerRadius="10"
+                         x:Name="btnRaizCuadrada"
+                         Clicked="btnRaizCuadrada_Clicked"
+                          IsVisible="False"
+                         />
+            <StackLayout Orientation="Horizontal"  IsVisible="False">
+                <Label Text="La Raiz Cuadrada de 2 es: " 
+                       FontAttributes="Bold"></Label>
+                <Label x:Name="lblRaiz2" 
+                       Text=""></Label>
+            </StackLayout>
+
+            <Label FontSize="Subtitle" Text="Pregunta 1: Xamarin Forms es un ..."></Label>
+            <RadioButton Content="IDE" FontSize="Default" GroupName="preg1"/>
+            <RadioButton Content="Sitio Web" FontSize="Default" GroupName="preg1"/>
+            <RadioButton x:Name="chkP1" Content="Framework multiplataforma" FontSize="Default" GroupName="preg1"/>
+            <RadioButton Content="Lenguaje de Programación" FontSize="Default" GroupName="preg1"/>
+
+            <Label FontSize="Subtitle" Text="Pregunta 2: Para mostrar un texto simple puedes usar ..."></Label>
+            <RadioButton Content="Button" FontSize="Default" GroupName="preg2"/>
+            <RadioButton Content="WebView" FontSize="Default" GroupName="preg2"/>
+            <RadioButton Content="BoxView" FontSize="Default" GroupName="preg2"/>
+            <RadioButton x:Name="chkP2" Content="Label" FontSize="Default" GroupName="preg2"/>
+
+            <Button Text="Verificar" x:Name="btnVerificar" Clicked="btnVerificar_Clicked"/>
+
+            <SearchBar Placeholder="Buscar" SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Favorite"
+                       IconImageSource="calculadora.png"
+                       Invoked="SwipeItem_Invoked"
+                       BackgroundColor="LightGreen"
+                       />
+                        
+                        <SwipeItem Text="Delete"
+                       IconImageSource="calculadora.png"
+                       Invoked="SwipeItem_Invoked_1"
+                       BackgroundColor="LightPink"
+                        />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <!-- Content -->
+                <Grid HeightRequest="60" WidthRequest="300" BackgroundColor="LightCyan">
+                    <Label Text="Hola" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Grid>
+            </SwipeView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

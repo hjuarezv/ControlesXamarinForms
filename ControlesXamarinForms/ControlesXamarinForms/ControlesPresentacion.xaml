@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlesXamarinForms.ControlesPresentacion">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <BoxView BackgroundColor="blue" HeightRequest="70" CornerRadius="10"/>
+                <Label Text="Nombre:" TextColor="red" FontSize="Large" FontAttributes="Bold" TextTransform="Uppercase"/>
+                <Ellipse BackgroundColor="Yellow" HeightRequest="150" 
+                         WidthRequest="150" 
+                         Fill="Green" 
+                         HorizontalOptions="Center"
+                         StrokeThickness="5"
+                         Stroke="Red"
+                         />
+                <Rectangle WidthRequest="100" HeightRequest="50" BackgroundColor="Blue" 
+                           Stroke="Pink" StrokeThickness="5" HorizontalOptions="Center"/>
+                <Image Source="@drawable/puno4.jpg" Aspect="AspectFill" HeightRequest="100"/>
+                <Line X1="0" Y1="0" X2="100" Y2="50" Stroke="Blue" StrokeThickness="5"/>
+                <Path Data="M 50,100 L 100,100 100,50Z"
+                      Stroke="Black"
+                      Aspect="Uniform"
+                      HorizontalOptions="Start" />
+                <WebView Source="https://www.google.com.pe" HeightRequest="500"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

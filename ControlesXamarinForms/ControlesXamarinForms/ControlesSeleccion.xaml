@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlesXamarinForms.ControlesSeleccion">
+    <ContentPage.Content>
+        <StackLayout>
+            <CheckBox IsChecked="False"/>
+            <DatePicker Format="dd/MM/yyyy" MinimumDate="11/12/2022" MaximumDate="11/30/2022"/>
+            <Slider MinimumTrackColor="Red" 
+                    MaximumTrackColor="Green" 
+                    ThumbColor="Blue" 
+                    Minimum="0" 
+                    Maximum="100" 
+                    x:Name="slider1"
+                    ValueChanged="Slider_ValueChanged"/>
+            <Label x:Name="lblValor"></Label>
+            
+            <StackLayout Margin="20">
+                <Label x:Name="_rotatingLabel"
+                       Text="ROTATING TEXT"
+                       FontSize="Large"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" />
+                <Stepper Maximum="360"
+                         Minimum="0"
+                     Increment="30"
+                     HorizontalOptions="Center"
+                     ValueChanged="Stepper_ValueChanged" />
+                <Label x:Name="_displayLabel"
+                   Text="(uninitialized)"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" /> 
+            </StackLayout>
+            <TimePicker/>
+            <Switch x:Name="opcion1" IsToggled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
